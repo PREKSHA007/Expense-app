@@ -11,76 +11,95 @@
 margin: 0 auto; 
 width:250px;
 font-size: large;
-color: rgb(40, 12, 116);
+color: rgb(219, 190, 233);
 }
 input[type=text] {
   border: 2px solid rgb(64, 6, 109);
   border-radius: 7px;
 }
 .button1:hover {
-  background-color: #146a95;
-  color: white;
+  background-color: #c79220;
+  color: rgb(40, 4, 4);
 }
 
 .button2:hover{
-    background-color: #146a95;
+    background-color: #7908a5;
   color: white;
 }
   hr.new1 {
-  border: 1px solid rgb(31, 8, 83);
-
+  border: 1px solid rgb(215, 207, 234);
+  }
+  p{
+    margin: 0 auto; 
+width:250px;
+font-size: large;
+color: rgb(219, 190, 233);
+  }
+  table.center {
+  margin-left: auto; 
+  margin-right: auto;
 }
 
 
-
 </style>
-<body style=" background: linear-gradient(90deg, rgba(234,233,255,1) 0%, rgba(252,167,213,1) 35%, rgba(194,245,255,1) 100%);">
-    <h1 style="font-family:Roboto-Slab;text-align:center;font-size:200%;
+
+<body style=" color:rgb(242, 235, 235);background: linear-gradient(90deg, rgb(7, 7, 86) 0%, rgb(92, 7, 52) 35%, rgb(21, 127, 149) 100%); text-align: center;">
+    <header>
+    <h1 style="font-family:Roboto-Slab;text-align:center;font-size:200%;background: linear-gradient(90deg, rgba(234,233,255,1) 0%, rgba(252,167,213,1) 35%, rgba(194,245,255,1) 100%);
 ;padding-top: 30px;
   padding-right: 30px;
   padding-bottom: 30px;
-  padding-left: 80px;color:white;background: linear-gradient(90deg, rgb(7, 7, 86) 0%, rgb(92, 7, 52) 35%, rgb(21, 127, 149) 100%);">Expense App</h1>
+  padding-left: 80px;">Expense App</h1>
+  </header>
 
-  <p>
-    <form>
+<table class="center">
+  <tr>
+    <th>Total Expense </th>
+    <th><input type="number"  name="amount"></th>
+  </tr>
+  <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  <tr>
+    <th>Date</th>
+    <th><input type="date" id="start" name="trip-start"
+      value="2023-01-13"
+      min="2023-01-01" max="2023-12-31"></th>
+  </tr>
+  <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  <tr>
+    <th>Accounts:</th>
+    <th><div>
+      <input type="radio"  name="drone" value="cash"
+                checked>
+         <label for="cash">Cash</label>
+       </div>
+   
+       <div>
+         <input type="radio" name="drone" value="accounts">
+         <label for="accounts">Accounts</label>
+       </div>
+   
+       <div>
+         <input type="radio"  name="drone" value="card">
+         <label for="card">Card</label>
+         </div></th>
+  </tr>
+  <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  <tr>
+    <th>Ammount:</th>
+    <th><input type="number"  name="amount"></th>
+  </tr>
+  <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+  <tr>
+    <th>Note:</th>
+    <th><input type="text"  name="note"></th>
+  </tr>
+</table>
+     <br>
+  
+    <input type="button" value="Add Expense" onclick="msg()" class="button button1">
+     <input type="button" value="Delete Expense" onclick="msg()" class="button button2">
+     
   
   
-  <label for="start">Date:</label>
-
-<input type="date" id="start" name="trip-start"
-       value="2023-01-13"
-       min="2023-01-01" max="2023-12-31"><br><br>
-
-       <legend>Account:</legend>
-
-   <input type="radio"  name="drone" value="cash"
-             checked>
-      <label for="cash">Cash</label>
-    </div>
-
-    <div>
-      <input type="radio" name="drone" value="accounts">
-      <label for="accounts">Accounts</label>
-    </div>
-
-    <div>
-      <input type="radio"  name="drone" value="card">
-      <label for="card">Card</label>
-      </div><br>
-
-      <label for="ammount">Ammount:</label>
-
-      <input type="number"  name="ammount"><br><br>
-      <label for="note">Note:</label>
-
-
-      <input type="text"  name="note"><br><br>
-      <input type="button" value="Add Expense" onclick="msg()" class="button button1">
-       <input type="button" value="Delete Expense" onclick="msg()" class="button button2">
-       <hr class="new1">
-      
-</form>
-
-  </p>
 </body>
 </html>
